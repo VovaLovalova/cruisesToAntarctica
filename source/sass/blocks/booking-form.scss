@@ -1,0 +1,78 @@
+.booking-form {
+  width: 403px;
+  min-height: 455px;
+  background-color: $color-tangaroa;
+  padding: 50px;
+}
+
+.booking-form p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: $color-alice-blue;
+  margin: 0;
+  margin-bottom: 35px;
+}
+
+.booking-form input[type="text"]::placeholder,
+.booking-form input[type="tel"]::placeholder,
+.booking-form input[type="email"]::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.booking-form input[type="text"],
+.booking-form input[type="tel"],
+.booking-form input[type="email"] {
+  width: 100%;
+  height: 43px;
+  padding: 11px 16px;
+  margin-bottom: 20px;
+  border: none;
+}
+
+.booking-form input[type="checkbox"] {
+  display: none;
+}
+
+.booking-form label[for="agreement"] {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 13px;
+  color: $color-alice-blue;
+  margin-bottom: 30px;
+  margin-left: 23px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.booking-form label[for="agreement"]::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: $color-alice-blue;
+  top: -3px;
+  left: -23px;
+}
+
+.booking-form input[type="checkbox"]:checked + label[for="agreement"]::before {
+  background-image: url("../../img/svg/done.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.booking-form button[type="submit"] {
+  width: 100%;
+  background-color: $color-alice-blue;
+  padding: 14px 46px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  color: $color-tangaroa;
+  cursor: pointer;
+  border: none;
+}

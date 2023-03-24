@@ -1,0 +1,23 @@
+.advantages-card {
+  width: 360px;
+  min-height: 241px;
+  background-color: $color-alice-blue;
+  padding: 30px;
+}
+
+.advantages-card h3 {
+  color: $color-tangaroa;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+.advantages-card p {
+  color: $color-tangaroa;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+}

@@ -1,0 +1,21 @@
+.footer-navigation {
+  display: flex;
+  align-items: center;
+  margin-right: 33px;
+}
+
+.footer-navigation ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  column-gap: 33px;
+  flex-wrap: wrap;
+}
+
+.footer-navigation a {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: $color-alice-blue;
+}

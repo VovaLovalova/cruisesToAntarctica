@@ -9,7 +9,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: -108px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .title__container {
@@ -24,6 +24,7 @@
   font-size: 54px;
   line-height: 66px;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 30px;
 }
 
 .title p {
@@ -32,4 +33,5 @@
   font-size: 20px;
   line-height: 24px;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 0;
 }

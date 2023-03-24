@@ -1,0 +1,35 @@
+.cruises {
+  width: 100%;
+  min-height: 682px;
+  background-color: $color-alice-blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cruises__container {
+  max-width: 1366px;
+  width: 100%;
+  padding: 95px 118px 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cruises h2 {
+  color: $color-tangaroa;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+  margin-top: 0;
+  margin-bottom: 60px;
+}
+
+.cruises ul {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 260px 260px 260px 260px;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}

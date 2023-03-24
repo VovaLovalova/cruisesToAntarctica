@@ -1,0 +1,38 @@
+.booking {
+  width: 100%;
+  min-height: 555px;
+  background-image: url('../../img/bg/booking-bg.jpg');
+  background-color: $color-tangaroa;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.booking__container {
+  max-width: 1366px;
+  width: 100%;
+  padding: 50px 163px;
+  display: flex;
+  column-gap: 144px;
+}
+
+.booking h2 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 60px;
+  color: $color-tangaroa;
+  margin-top: 178px;
+  margin-bottom: 30px;
+}
+
+.booking p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: $color-tangaroa;
+  margin: 0;
+  width: 352px;
+}

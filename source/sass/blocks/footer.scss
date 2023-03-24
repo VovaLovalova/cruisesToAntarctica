@@ -1,24 +1,21 @@
-.header {
+.footer {
   width: 100%;
-  min-height: 108px;
-  background-color: $color-transparent;
+  min-height: 138px;
+  background-color: $color-tangaroa;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
-.header__container {
+.footer__container {
   max-width: 1366px;
   width: 100%;
-  padding: 35px 103px;
+  padding: 50px 103px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.header__logo {
-  margin-right: 30px;
+.footer__logo {
+  margin-right: 40px;
 }
