@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <link rel="preload" href="./fonts/Montserrat-Regular.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="./fonts/Montserrat-Medium.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="./fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="./fonts/Montserrat-Bold.woff2" as="font" type="font/woff2">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Описание проекта">
+  <title>Cruises to Antarctica</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+  <svg style="display: none;">
+    <symbol viewBox="0 0 70 38" id="logo">
+      <path fill="#F9FBFD" fill-rule="evenodd"
+        d="m.904 31.125 13.769-18.582 3.766 2.013L27.404 0l5.585 6.659 2.078-1.704 8.054 10.22 5.716-6.813 15.977 22.763L49.42 11.769l-2.338 8.13 2.143 6.426-13.769-18.97-.15 6.473 7.814 17.297-14.614-26.79 4.222 14.48-5.91-14.092-3.247 9.369.649-6.117L16.1 30.04l.974-9.291-3.377-3.716L.904 31.125Z"
+        clip-rule="evenodd" />
+      <path fill="#F9FBFD" fill-rule="evenodd"
+        d="M69.441 34.031C47.641 16.428 13.71 40.63 0 31.296c15.072 13.226 50.302-9.132 69.441 2.735Z"
+        clip-rule="evenodd" />
+      <path fill="#F9FBFD" fill-rule="evenodd"
+        d="M70 35.416c-17.104-10.899-42.543 4.268-55.581.756 14.128 6.856 40.43-8.336 55.581-.756Z"
+        clip-rule="evenodd" />
+    </symbol>
+  </svg>
+
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <svg class="header__logo" width="70" height="38">
+          <use href="#logo"></use>
+        </svg>
+        <nav class="header__navigation navigation">
+          <ul>
+            <li>
+              <a href="#">Преимущества</a>
+            </li>
+            <li>
+              <a href="#">Направления</a>
+            </li>
+            <li>
+              <a href="#">Ближайшие круизы</a>
+            </li>
+            <li>
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="title">
+        <div class="title__container">
+          <h1>Круизы в Антарктику</h1>
+          <p>Волшебный мир айсбергов и пингвинов</p>
+        </div>
+      </section>
+
+      <section class="description">
+        <div class="description__container">
+          <h2>Путешествие на край Земли</h2>
+          <p>Это волшебное путешествие поможет вам познакомиться поближе с удивительным миром Антарктики. Наш круизный
+            лайнер отвезет вас на край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов,
+            китов, морских котиков и многое другое.</p>
+          <img src="" alt="Пингвины в Антарктике">
+        </div>
+      </section>
+
+      <section class="advantages">
+        <div class="advantages__container">
+          <h2>Преимущества</h2>
+          <ul>
+            <li>
+              <svg></svg>
+              <h3>Небольшой круизный лайнер</h3>
+              <p>Круизный лайнер, рассчитанный всего лишь на 300 гостей, поможет избежать шума и очередей и даст
+                возможность насладиться видами и природой.</p>
+            </li>
+            <li>
+              <svg></svg>
+              <h3>Система все включено</h3>
+              <p>Все наши круизы работают по системе “Все Включено”. Великолепные блюда и безлимитный бар доступны для
+                вас 24 часа.</p>
+            </li>
+            <li>
+              <svg></svg>
+              <h3>Экскурсионные туры на Zodiac</h3>
+              <p>Экскурсионные туры к берегам Антарктиды совершаются на оборудованных лодках типа Zodiac c опытными
+                экскурсоводами. </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="cruises">
+        <div class="cruises__container">
+          <h2>Ближайшие круизы</h2>
+          <ul>
+            <li>
+              <h3></h3>
+              <b></b>
+              <p></p>
+
+              <b></b>
+              <p></p>
+
+              <b></b>
+              <p></p>
+
+              <b></b>
+              <p></p>
+
+              <button>Забронировать</button>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="booking">
+        <div class="booking__container">
+          <h2>Раннее бронирование</h2>
+          <p>Забронируйте тур за 3-6 месяцев
+            до даты выезда и сэкономьте до 50%</p>
+          <form action="">
+            <p>Оставьте заявку и мы свяжемся с вами в ближайшее время</p>
+            <label for="name">Имя</label>
+            <input type="text" id="name">
+
+            <label for="phone">Телефон</label>
+            <input type="text" id="phone">
+
+            <label for="email">Email</label>
+            <input type="email" id="email">
+
+            <label for="agreement"></label>
+            <input type="checkbox" id="agreement">
+
+            <button>Оставить заявку</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="contacts">
+        <div class="contacts__container">
+          <h2>Адрес офиса продаж</h2>
+          <div class="contacts__map"></div>
+          <address>
+            <p>У вас ещё остались вопросы или сомнения?
+              Приезжайте к нам в офис и мы вам все расскажем.</p>
+            <span>г. Санкт Петербург, ул. Большая Конюшенная, 19/8</span>
+            <span>8-800-200-00-00</span>
+          </address>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__nav footer-navigation">
+          <svg></svg>
+          <ul>
+            <li>
+              <a href="#">Преимущества</a>
+            </li>
+            <li>
+              <a href="#">Направления</a>
+            </li>
+            <li>
+              <a href="#">Ближайшие круизы</a>
+            </li>
+            <li>
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__social social">
+          <ul>
+            <li>
+              <a href="">
+                <h4>Одноклассники</h4>
+                <svg></svg>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <h4>Одноклассники</h4>
+                <svg></svg>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <h4>Одноклассники</h4>
+                <svg></svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

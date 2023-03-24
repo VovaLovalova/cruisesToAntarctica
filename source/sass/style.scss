@@ -1,0 +1,21 @@
+// Vendor
+// ---------------------------------
+
+@import "vendor/normalize";
+// Swiper 7.4.1
+
+// Global
+// ---------------------------------
+
+@import "variables";
+@import "global/fonts";
+@import "global/reboot";
+@import "global/utils";
+
+// Blocks
+// ---------------------------------
+@import "blocks/header";
+@import "blocks/title";
+@import "blocks/navigation";
+
+// ---------------------------------
