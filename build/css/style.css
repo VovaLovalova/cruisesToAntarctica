@@ -709,9 +709,9 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-column-gap: 88px;
-  -moz-column-gap: 88px;
-  column-gap: 88px;
+  -webkit-column-gap: 7.5%;
+  -moz-column-gap: 7.5%;
+  column-gap: 7.5%;
 }
 
 .description__text {
@@ -776,8 +776,8 @@ button,
   list-style-type: none;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 360px 360px 360px;
-  grid-template-columns: 360px 360px 360px;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 40px;
   margin: 0;
   padding: 0;
@@ -793,7 +793,7 @@ button,
 }
 
 .advantages-card {
-  width: 360px;
+  max-width: 360px;
   min-height: 241px;
   background-color: #f9fbfd;
   padding: 30px;
@@ -859,10 +859,13 @@ button,
 
 .cruises ul {
   list-style-type: none;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
   gap: 30px;
   margin: 0;
   padding: 0;
@@ -890,7 +893,7 @@ button,
 .cruises-card h3 {
   color: #f9fbfd;
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 0;
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
@@ -922,11 +925,11 @@ button,
   flex-direction: column;
   row-gap: 8px;
   margin: 0;
-  margin-bottom: 23px;
+  margin-bottom: 14px;
 }
 
 .cruises-card button {
-  width: 210px;
+  width: 100%;
   height: 40px;
   background-color: #f9fbfd;
   padding: 11px 46px;

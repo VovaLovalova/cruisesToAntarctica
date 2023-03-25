@@ -27,8 +27,9 @@
 
 .cruises ul {
   list-style-type: none;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   gap: 30px;
   margin: 0;
   padding: 0;
