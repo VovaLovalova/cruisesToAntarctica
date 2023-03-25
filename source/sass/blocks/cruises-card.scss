@@ -3,6 +3,7 @@
   min-height: 386px;
   background-color: $color-tangaroa;
   padding: 35px 25px;
+  position: relative;
 }
 
 .cruises-card h3 {
@@ -47,4 +48,38 @@
   color: $color-tangaroa;
   cursor: pointer;
   border: none;
+}
+
+.cruises-card button:hover {
+  outline: 2px solid $color-alice-blue;
+}
+
+.cruises-card__cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: $color-tangaroa;
+  top: 0;
+  left: 0;
+}
+
+.cruises-card__cover img {
+  width: 100%;
+  height: 100%;
+}
+
+.cruises-card__cover span {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: $color-alice-blue;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+}
+
+.cruises-card__cover:hover,
+.cruises-card__cover:active,
+.cruises-card__cover:focus {
+  display: none;
 }

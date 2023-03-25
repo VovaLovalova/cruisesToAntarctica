@@ -1,7 +1,7 @@
 .booking {
   width: 100%;
   min-height: 555px;
-  background-image: url('../../img/bg/booking-bg.jpg');
+  background-image: url("../img/bg/booking-bg.jpg");
   background-color: $color-tangaroa;
   background-position: center;
   background-repeat: no-repeat;
@@ -9,6 +9,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media (min-resolution: 192dpi) {
+  .booking {
+    background-image: url("../img/bg/booking-bg@2x.jpg");
+  }
 }
 
 .booking__container {

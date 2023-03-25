@@ -1,7 +1,7 @@
 .title {
   width: 100%;
   min-height: 650px;
-  background-image: url('../../img/bg/title-bg.jpg');
+  background-image: url("../img/bg/title-bg.jpg");
   background-color: $color-tangaroa;
   background-position: center;
   background-repeat: no-repeat;
@@ -9,7 +9,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 4px $color-black-transparent;
+}
+
+@media (min-resolution: 192dpi) {
+  .title {
+    background-image: url("../img/bg/title-bg@2x.jpg");
+  }
 }
 
 .title__container {
@@ -23,7 +29,7 @@
   font-weight: 700;
   font-size: 54px;
   line-height: 66px;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 4px 4px $color-black-transparent;
   margin-bottom: 30px;
 }
 
@@ -32,6 +38,6 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 4px 4px $color-black-transparent;
   margin: 0;
 }

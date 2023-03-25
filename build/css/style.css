@@ -437,6 +437,8 @@ html {
   font-size: 16px;
   line-height: 24px;
   color: #000000;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -607,14 +609,14 @@ button,
   justify-content: space-between;
 }
 
-.header__logo {
+.header__logo-link {
   margin-right: 30px;
 }
 
 .title {
   width: 100%;
   min-height: 650px;
-  background-image: url("../../img/bg/title-bg.jpg");
+  background-image: url("../img/bg/title-bg.jpg");
   background-color: #011c40;
   background-position: center;
   background-repeat: no-repeat;
@@ -629,8 +631,8 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .title__container {
@@ -644,7 +646,7 @@ button,
   font-weight: 700;
   font-size: 54px;
   line-height: 66px;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   margin-bottom: 30px;
 }
 
@@ -653,7 +655,7 @@ button,
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   margin: 0;
 }
 
@@ -676,6 +678,10 @@ button,
   -webkit-column-gap: 33px;
   -moz-column-gap: 33px;
   column-gap: 33px;
+}
+
+.navigation a:hover {
+  outline: 2px solid #f9fbfd;
 }
 
 .description {
@@ -726,7 +732,7 @@ button,
 .advantages {
   width: 100%;
   min-height: 562px;
-  background-image: url("../../img/bg/advantages-bg.jpg");
+  background-image: url("../img/bg/advantages-bg.jpg");
   background-color: #f9fbfd;
   background-position: center;
   background-repeat: no-repeat;
@@ -860,6 +866,7 @@ button,
   min-height: 386px;
   background-color: #011c40;
   padding: 35px 25px;
+  position: relative;
 }
 
 .cruises-card h3 {
@@ -911,10 +918,44 @@ button,
   border: none;
 }
 
+.cruises-card button:hover {
+  outline: 2px solid #f9fbfd;
+}
+
+.cruises-card__cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #011c40;
+  top: 0;
+  left: 0;
+}
+
+.cruises-card__cover img {
+  width: 100%;
+  height: 100%;
+}
+
+.cruises-card__cover span {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #f9fbfd;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+}
+
+.cruises-card__cover:hover,
+.cruises-card__cover:active,
+.cruises-card__cover:focus {
+  display: none;
+}
+
 .booking {
   width: 100%;
   min-height: 555px;
-  background-image: url("../../img/bg/booking-bg.jpg");
+  background-image: url("../img/bg/booking-bg.jpg");
   background-color: #011c40;
   background-position: center;
   background-repeat: no-repeat;
@@ -966,6 +1007,7 @@ button,
   min-height: 455px;
   background-color: #011c40;
   padding: 50px;
+  position: relative;
 }
 
 .booking-form p {
@@ -1032,6 +1074,12 @@ button,
   border: none;
 }
 
+.booking-form input[type=text]:hover,
+.booking-form input[type=tel]:hover,
+.booking-form input[type=email]:hover {
+  outline: 2px solid #f9fbfd;
+}
+
 .booking-form input[type=checkbox] {
   display: none;
 }
@@ -1074,6 +1122,20 @@ button,
   color: #011c40;
   cursor: pointer;
   border: none;
+}
+
+.booking-form button[type=submit]:hover {
+  outline: 2px solid #f9fbfd;
+}
+
+.booking-form__error {
+  position: absolute;
+  bottom: 100px;
+  left: 50px;
+  color: red;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
 }
 
 .contacts {
@@ -1184,7 +1246,7 @@ button,
   justify-content: space-between;
 }
 
-.footer__logo {
+.footer__logo-link {
   margin-right: 40px;
 }
 
@@ -1219,6 +1281,10 @@ button,
   color: #f9fbfd;
 }
 
+.footer-navigation a:hover {
+  outline: 2px solid #f9fbfd;
+}
+
 .social ul {
   list-style-type: none;
   display: -webkit-box;
@@ -1240,4 +1306,22 @@ button,
   justify-content: center;
   width: 40px;
   height: 40px;
+}
+
+.social a:hover {
+  outline: 2px solid #f9fbfd;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 192dpi) {
+  .title {
+    background-image: url("../img/bg/title-bg@2x.jpg");
+  }
+
+  .advantages {
+    background-image: url("../img/bg/advantages-bg@2x.jpg");
+  }
+
+  .booking {
+    background-image: url("../img/bg/booking-bg@2x.jpg");
+  }
 }

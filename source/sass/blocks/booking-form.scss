@@ -3,6 +3,7 @@
   min-height: 455px;
   background-color: $color-tangaroa;
   padding: 50px;
+  position: relative;
 }
 
 .booking-form p {
@@ -33,6 +34,12 @@
   border: none;
 }
 
+.booking-form input[type="text"]:hover,
+.booking-form input[type="tel"]:hover,
+.booking-form input[type="email"]:hover {
+  outline: 2px solid $color-alice-blue;
+}
+
 .booking-form input[type="checkbox"] {
   display: none;
 }
@@ -59,7 +66,7 @@
   left: -23px;
 }
 
-.booking-form input[type="checkbox"]:checked + label[for="agreement"]::before {
+.booking-form input[type="checkbox"]:checked+label[for="agreement"]::before {
   background-image: url("../../img/svg/done.svg");
   background-position: center;
   background-repeat: no-repeat;
@@ -75,4 +82,18 @@
   color: $color-tangaroa;
   cursor: pointer;
   border: none;
+}
+
+.booking-form button[type="submit"]:hover {
+  outline: 2px solid $color-alice-blue;
+}
+
+.booking-form__error {
+  position: absolute;
+  bottom: 100px;
+  left: 50px;
+  color: red;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
 }

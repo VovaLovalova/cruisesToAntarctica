@@ -18,7 +18,8 @@ html {
   font-size: $fz-default;
   line-height: 24px;
   color: $color-default-black;
-
+  scroll-behavior: smooth;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   // оптимизация выравнивания шрифта относительно центра строки
