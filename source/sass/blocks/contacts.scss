@@ -11,6 +11,7 @@
   width: 100%;
   padding: 120px 103px;
   display: flex;
+  align-items: center;
   column-gap: 100px;
 }
 
@@ -26,11 +27,12 @@
 .contacts p {
   font-weight: 500;
   font-size: 18px;
+  font-style: normal;
   line-height: 27px;
   color: $color-tangaroa;
   width: 500px;
-  margin-top: 81px;
-  margin-bottom: 45px;
+  margin-top: 0;
+  margin-bottom: 32px;
 }
 
 .contacts ul {
@@ -45,7 +47,7 @@
 }
 
 .contacts li:not(:last-child) {
-  margin-bottom: 33px;
+  margin-bottom: 20px;
 }
 
 .contacts__img {
@@ -55,6 +57,7 @@
 .contacts span {
   font-weight: 400;
   font-size: 16px;
+  font-style: normal;
   line-height: 24px;
   color: $color-tangaroa;
   display: block;

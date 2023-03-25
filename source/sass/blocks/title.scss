@@ -9,7 +9,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 4px 4px $color-black-transparent;
+  // box-shadow: 0 4px 4px $color-black-transparent;
 }
 
 @media (min-resolution: 192dpi) {
@@ -20,8 +20,9 @@
 
 .title__container {
   max-width: 1366px;
+  height: 100%;
   width: 100%;
-  padding: 283px 198px;
+  padding: 270px 198px 286px;
 }
 
 .title h1 {
@@ -30,7 +31,8 @@
   font-size: 54px;
   line-height: 66px;
   text-shadow: 0 4px 4px $color-black-transparent;
-  margin-bottom: 30px;
+  margin-top: 0;
+  margin-bottom: 12px;
 }
 
 .title p {

@@ -1,6 +1,6 @@
 .description {
   width: 100%;
-  min-height: 566px;
+  min-height: 559px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,10 +9,15 @@
 .description__container {
   max-width: 1366px;
   width: 100%;
-  padding: 120px 103px 145px;
-  display: grid;
-  grid-template-columns: 512px 560px;
+  padding: 112px 103px 133px;
+  display: flex;
+  align-items: center;
   column-gap: 88px;
+}
+
+.description__text {
+  max-width: 512px;
+  width: 100%;
 }
 
 .description h2 {
@@ -20,8 +25,8 @@
   font-weight: 600;
   font-size: 28px;
   line-height: 42px;
-  margin-top: 66px;
-  margin-bottom: 40px;
+  margin-top: 0;
+  margin-bottom: 22px;
 }
 
 .description p {

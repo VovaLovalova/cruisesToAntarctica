@@ -22,7 +22,13 @@
   width: 100%;
   padding: 50px 163px;
   display: flex;
+  align-items: center;
   column-gap: 144px;
+}
+
+.booking__text {
+  max-width: 493px;
+  width: 100%;
 }
 
 .booking h2 {
@@ -30,8 +36,8 @@
   font-size: 40px;
   line-height: 60px;
   color: $color-tangaroa;
-  margin-top: 178px;
-  margin-bottom: 30px;
+  margin-top: -7px;
+  margin-bottom: 7px;
 }
 
 .booking p {
