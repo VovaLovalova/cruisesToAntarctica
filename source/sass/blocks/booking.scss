@@ -40,7 +40,7 @@
   margin-bottom: 7px;
 }
 
-.booking p {
+.booking__text p {
   font-weight: 400;
   font-size: 18px;
   line-height: 27px;
@@ -77,4 +77,35 @@
 }
 
 
-@media (max-width: $vp-mobile) {}
+@media (max-width: $vp-mobile) {
+  .booking {
+    min-height: 760px;
+  }
+
+  .booking__container {
+    max-width: 767px;
+    min-width: 320px;
+    width: 100%;
+    padding: 65px 15px;
+  }
+
+  .booking__text {
+    max-width: 270px;
+    margin-bottom: 40px;
+  }
+
+  .booking h2 {
+    font-size: 24px;
+    line-height: 31px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
+
+  .booking__text p {
+    font-size: 16px;
+    line-height: 22px;
+    width: 257px;
+    text-align: center;
+  }
+}

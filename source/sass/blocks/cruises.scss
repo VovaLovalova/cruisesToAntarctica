@@ -49,4 +49,24 @@
 }
 
 
-@media (max-width: $vp-mobile) {}
+@media (max-width: $vp-mobile) {
+  .cruises__container {
+    max-width: 767px;
+    min-width: 320px;
+    width: 100%;
+    padding: 60px 25px;
+  }
+
+  .cruises h2 {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 40px;
+  }
+
+  .cruises ul {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 30px;
+  }
+}

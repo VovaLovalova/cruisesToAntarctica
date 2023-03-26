@@ -66,5 +66,24 @@
 
 
 @media (max-width: $vp-mobile) {
+  .advantages {
+    min-height: 900px;
+  }
 
+  .advantages__container {
+    max-width: 767px;
+    min-width: 320px;
+    width: 100%;
+    padding: 65px 15px;
+  }
+
+  .advantages ul {
+    grid-template-columns: 1fr;
+  }
+
+  .advantages h2 {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 40px;
+  }
 }

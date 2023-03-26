@@ -14,13 +14,6 @@
   max-width: 1366px;
   width: 100%;
   padding: 33px 103px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.header__logo-link {
-  margin-right: 30px;
 }
 
 @media (max-width: $vp-tablet) {
@@ -32,18 +25,17 @@
     max-width: 768px;
     padding: 30px 45px;
   }
-
-  .header__logo-link {
-    margin-right: 10px;
-  }
-
-  .header__logo {
-    width: 38px;
-    height: 20px;
-  }
 }
 
 
 @media (max-width: $vp-mobile) {
+  .header {
+    min-height: 62px;
+  }
 
+  .header__container {
+    max-width: 767px;
+    min-width: 320px;
+    padding: 20px 15px;
+  }
 }

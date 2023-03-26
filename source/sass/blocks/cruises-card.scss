@@ -93,10 +93,17 @@
 
 @media (max-width: $vp-tablet) {
   .cruises-card {
-    max-width: 308px;
+    max-width: 309px;
     padding: 35px;
   }
 }
 
 
-@media (max-width: $vp-mobile) {}
+@media (max-width: $vp-mobile) {
+  .cruises-card {
+    min-height: 386px;
+    max-width: 767px;
+    min-width: 270px;
+    padding: 35px 25px;
+  }
+}

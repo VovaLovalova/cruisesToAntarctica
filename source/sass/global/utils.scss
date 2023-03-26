@@ -14,3 +14,21 @@
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
 }
+
+.wrapper {
+  position: relative;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  height: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 43, 102, 0.5);
+  display: none;
+}
+
+.background--open {
+  display: block;
+}

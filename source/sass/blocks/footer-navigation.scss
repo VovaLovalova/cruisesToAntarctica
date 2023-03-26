@@ -40,4 +40,25 @@
 }
 
 
-@media (max-width: $vp-mobile) {}
+@media (max-width: $vp-mobile) {
+  .footer-navigation {
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 30px;
+  }
+
+  .footer-navigation ul {
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    row-gap: 23px;
+    column-gap: 0;
+  }
+
+  .footer-navigation a {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}

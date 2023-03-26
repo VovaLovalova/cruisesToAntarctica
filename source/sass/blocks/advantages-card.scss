@@ -36,4 +36,12 @@
 }
 
 
-@media (max-width: $vp-mobile) {}
+@media (max-width: $vp-mobile) {
+  .advantages-card {
+    max-width: 767px;
+    min-width: 290px;
+    width: 100%;
+    min-height: 249px;
+    padding: 25px 20px;
+  }
+}

@@ -106,3 +106,19 @@
   font-size: 18px;
   line-height: 27px;
 }
+
+@media (max-width: $vp-mobile) {
+  .booking-form {
+    min-width: 290px;
+    width: 100%;
+    min-height: 460px;
+    padding: 40px 30px;
+  }
+
+  .booking-form p {
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 35px;
+    text-align: center;
+  }
+}

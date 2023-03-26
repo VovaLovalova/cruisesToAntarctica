@@ -126,6 +126,50 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // МОБИЛЬНОЕ МЕНЮ
+  let navigation = document.querySelector('.navigation');
+  let navigationButton = document.querySelector('#navigation-button');
+  let navigationLinkArray = navigation.querySelectorAll('a');
+  let background = document.querySelector('.background');
+
+  let onNavigationLinkClick = function () {
+    navigation.classList.remove('navigation--open');
+    navigationButton.classList.remove('navigation__button--open');
+    navigationButton.classList.add('navigation__button--close');
+    background.classList.remove('background--open');
+
+    for (let i = 0; navigationLinkArray.length > i; i++) {
+      navigationLinkArray[i].removeEventListener('click', onNavigationLinkClick);
+    }
+    background.removeEventListener('click', onBackgroundClick);
+  };
+
+  let onBackgroundClick = function () {
+    navigation.classList.remove('navigation--open');
+    background.classList.remove('background--open');
+    navigationButton.classList.remove('navigation__button--open');
+    navigationButton.classList.add('navigation__button--close');
+
+    for (let i = 0; navigationLinkArray.length > i; i++) {
+      navigationLinkArray[i].removeEventListener('click', onNavigationLinkClick);
+    }
+    background.removeEventListener('click', onBackgroundClick);
+  };
+
+  let onNavigationButtonClick = function () {
+    navigation.classList.toggle('navigation--open');
+    navigationButton.classList.toggle('navigation__button--open');
+    navigationButton.classList.toggle('navigation__button--close');
+    background.classList.toggle('background--open');
+
+    for (let i = 0; navigationLinkArray.length > i; i++) {
+      navigationLinkArray[i].addEventListener('click', onNavigationLinkClick);
+    }
+    background.addEventListener('click', onBackgroundClick);
+  };
+
+  navigationButton.addEventListener('click', onNavigationButtonClick);
+
   iosVhFix();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
