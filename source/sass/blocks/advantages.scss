@@ -43,3 +43,28 @@
   margin-top: 0;
   margin-bottom: 48px;
 }
+
+@media (max-width: $vp-tablet) {
+  .advantages {
+    min-height: 588px;
+  }
+
+  .advantages__container {
+    max-width: 768px;
+    padding: 100px 45px;
+  }
+
+  .advantages ul {
+    gap: 30px;
+  }
+
+  .advantages h2 {
+    font-size: 26px;
+    line-height: 39px;
+  }
+}
+
+
+@media (max-width: $vp-mobile) {
+
+}

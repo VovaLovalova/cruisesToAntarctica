@@ -22,3 +22,28 @@
 .header__logo-link {
   margin-right: 30px;
 }
+
+@media (max-width: $vp-tablet) {
+  .header {
+    min-height: 80px;
+  }
+
+  .header__container {
+    max-width: 768px;
+    padding: 30px 45px;
+  }
+
+  .header__logo-link {
+    margin-right: 10px;
+  }
+
+  .header__logo {
+    width: 38px;
+    height: 20px;
+  }
+}
+
+
+@media (max-width: $vp-mobile) {
+
+}

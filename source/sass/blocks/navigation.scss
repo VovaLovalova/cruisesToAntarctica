@@ -17,3 +17,19 @@
 .navigation a:hover {
   outline: 2px solid $color-alice-blue;
 }
+
+@media (max-width: $vp-tablet) {
+  .navigation a {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .navigation ul {
+    column-gap: 23px;
+  }
+}
+
+
+@media (max-width: $vp-mobile) {
+
+}

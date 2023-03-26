@@ -48,3 +48,33 @@
   margin: 0;
   width: 352px;
 }
+
+@media (max-width: $vp-tablet) {
+  .booking {
+    min-height: 805px;
+  }
+
+  .booking__container {
+    max-width: 768px;
+    padding: 100px 45px;
+    display: flex;
+    flex-direction: column;
+    column-gap: 0;
+  }
+
+  .booking__text {
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+
+  .booking h2 {
+    font-size: 34px;
+    line-height: 51px;
+  }
+}
+
+
+@media (max-width: $vp-mobile) {}

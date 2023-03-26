@@ -34,3 +34,19 @@
   margin: 0;
   padding: 0;
 }
+
+
+@media (max-width: $vp-tablet) {
+  .cruises__container {
+    max-width: 768px;
+    padding: 100px 60px;
+  }
+
+  .cruises h2 {
+    font-size: 26px;
+    line-height: 39px;
+  }
+}
+
+
+@media (max-width: $vp-mobile) {}

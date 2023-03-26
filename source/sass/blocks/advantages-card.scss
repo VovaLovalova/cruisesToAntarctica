@@ -21,3 +21,19 @@
   line-height: 20px;
   margin: 0;
 }
+
+@media (max-width: $vp-tablet) {
+  .advantages-card {
+    max-width: 206px;
+    min-height: 310px;
+    padding: 26px 16px 25px 20px;
+  }
+
+  .advantages-card__img {
+    width: auto;
+    height: 26px;
+  }
+}
+
+
+@media (max-width: $vp-mobile) {}

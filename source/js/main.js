@@ -8,20 +8,23 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // КАРТА
 
-  ymaps.ready(init);
-  function init() {
-    // Создание карты.
-    let myMap = new ymaps.Map("map", {
-      // Координаты центра карты.
-      // Порядок по умолчанию: «широта, долгота».
-      // Чтобы не определять координаты центра карты вручную,
-      // воспользуйтесь инструментом Определение координат.
-      center: [59.938754, 30.323072],
-      // Уровень масштабирования. Допустимые значения:
-      // от 0 (весь мир) до 19.
-      zoom: 16
-    });
-  }
+  ymaps.ready(function () {
+    const myMap = new ymaps.Map('map', {
+      center: [59.937584989234644, 30.322661991559418],
+      zoom: 16,
+    }, {
+      searchControlProvider: 'yandex#search',
+    }),
+      myPlacemark = new ymaps.Placemark(myMap.getCenter(), {}, {
+        iconLayout: 'default#image',
+        iconImageHref: '../img/svg/marker.svg',
+        iconImageSize: [18, 22],
+        iconImageOffset: [-9, -11]
+      });
+
+    myMap.geoObjects
+        .add(myPlacemark);
+  });
 
   // ЧЕКБОКС В ФОРМЕ
 
@@ -62,6 +65,65 @@ window.addEventListener('DOMContentLoaded', () => {
 
     checkboxLabel.addEventListener('keydown', onCheckboxLabelKeydown);
     form.addEventListener('submit', onSubmitForm);
+  }
+
+  //  МАСКА ДЛЯ ВВОДА НОМЕРА ТЕЛЕФОНА
+  let phoneInput = document.querySelectorAll('input[type=tel]');
+
+  if (phoneInput) {
+    let getInputNumbersValue = function (input) {
+      return input.value.replace(/\D/g, '');
+    };
+
+    let onPhoneInput = function (e) {
+      let input = e.target;
+      let inputNumbersValue = getInputNumbersValue(input);
+      let formatedInputValue = '';
+
+      if (!inputNumbersValue) {
+        input.value = '';
+      }
+
+      if (['7', '8', '9'].indexOf(inputNumbersValue[0]) > -1) {
+        // russian number
+        if (inputNumbersValue[0] === '9') {
+          inputNumbersValue = '7' + inputNumbersValue;
+        }
+        let firstSymbols = '+7(';
+        formatedInputValue = firstSymbols;
+
+        if (inputNumbersValue.length > 1) {
+          formatedInputValue += inputNumbersValue.substring(1, 4);
+        }
+        if (inputNumbersValue.length >= 5) {
+          formatedInputValue += ') ' + inputNumbersValue.substring(4, 7);
+        }
+        if (inputNumbersValue.length >= 8) {
+          formatedInputValue += '-' + inputNumbersValue.substring(7, 9);
+        }
+        if (inputNumbersValue.length >= 10) {
+          formatedInputValue += '-' + inputNumbersValue.substring(9, 11);
+        }
+      } else {
+        // not russian number
+        formatedInputValue = '+' + inputNumbersValue.substring(0, 16);
+      }
+
+      input.value = formatedInputValue;
+    };
+
+    let onPhonedelete = function (e) {
+      let input = e.target;
+      if (e.keyCode === 8 && getInputNumbersValue(input).length === 1) {
+        input.value = '';
+      }
+    };
+
+    for (let i = 0; i < phoneInput.length; i++) {
+      let input = phoneInput[i];
+      input.addEventListener('input', onPhoneInput);
+      input.addEventListener('keydown', onPhonedelete);
+    }
   }
 
   iosVhFix();

@@ -23,3 +23,21 @@
 .footer-navigation a:hover {
   outline: 2px solid $color-alice-blue;
 }
+
+@media (max-width: $vp-tablet) {
+  .footer-navigation {
+    margin-right: 10px;
+  }
+
+  .footer-navigation ul {
+    column-gap: 23px;
+  }
+
+  .footer-navigation a {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+
+@media (max-width: $vp-mobile) {}

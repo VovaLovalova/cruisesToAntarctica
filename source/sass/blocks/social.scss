@@ -16,3 +16,18 @@
 .social a:hover {
   outline: 2px solid $color-alice-blue;
 }
+
+@media (max-width: $vp-tablet) {
+  .social a {
+    width: 25px;
+    height: 25px;
+  }
+
+  .social__img {
+    height: 16px;
+    width: auto;
+  }
+}
+
+
+@media (max-width: $vp-mobile) {}

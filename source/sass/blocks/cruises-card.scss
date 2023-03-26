@@ -90,3 +90,13 @@
 .cruises-card button:focus + .cruises-card__cover {
   display: none;
 }
+
+@media (max-width: $vp-tablet) {
+  .cruises-card {
+    max-width: 308px;
+    padding: 35px;
+  }
+}
+
+
+@media (max-width: $vp-mobile) {}

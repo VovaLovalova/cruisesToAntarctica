@@ -62,3 +62,29 @@
   color: $color-tangaroa;
   display: block;
 }
+
+@media (max-width: $vp-tablet) {
+  .contacts {
+    min-height: 535px;
+  }
+
+  .contacts__container {
+    max-width: 768px;
+    padding: 100px 45px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+  }
+
+  .contacts__map {
+    width: 324px;
+    height: 335px;
+  }
+
+  .contacts p {
+    width: 324px;
+  }
+}
+
+
+@media (max-width: $vp-mobile) {}

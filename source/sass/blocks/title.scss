@@ -43,3 +43,29 @@
   text-shadow: 0 4px 4px $color-black-transparent;
   margin: 0;
 }
+
+@media (max-width: $vp-tablet) {
+  .title {
+    min-height: 638px;
+  }
+
+  .title__container {
+    max-width: 768px;
+    padding: 280px 134px 280px 45px;
+  }
+
+  .title h1 {
+    font-size: 50px;
+    line-height: 61px;
+  }
+
+  .title p {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+
+@media (max-width: $vp-mobile) {
+
+}

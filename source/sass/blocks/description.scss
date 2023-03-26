@@ -36,3 +36,35 @@
   line-height: 24px;
   margin: 0;
 }
+
+@media (max-width: $vp-tablet) {
+  .description {
+    min-height: 464px;
+  }
+
+  .description__container {
+    max-width: 768px;
+    padding: 100px 45px;
+    column-gap: 30px;
+    align-items: flex-start;
+  }
+
+  .description__text {
+    max-width: 324px;
+  }
+
+  .description h2 {
+    font-size: 26px;
+    line-height: 36px;
+  }
+
+  .description__image {
+    width: 324px;
+    height: auto;
+  }
+}
+
+
+@media (max-width: $vp-mobile) {
+
+}
