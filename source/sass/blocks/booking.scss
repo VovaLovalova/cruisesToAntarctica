@@ -11,12 +11,6 @@
   align-items: center;
 }
 
-@media (min-resolution: 192dpi) {
-  .booking {
-    background-image: url("../img/bg/booking-bg@2x.jpg");
-  }
-}
-
 .booking__container {
   max-width: 1366px;
   width: 100%;
@@ -29,6 +23,10 @@
 .booking__text {
   max-width: 493px;
   width: 100%;
+}
+
+.booking__text br {
+  display: none;
 }
 
 .booking h2 {
@@ -52,11 +50,12 @@
 @media (max-width: $vp-tablet) {
   .booking {
     min-height: 805px;
+    background-image: url("../img/bg/booking-bg-tablet.jpg");
   }
 
   .booking__container {
     max-width: 768px;
-    padding: 100px 45px;
+    padding: 88px 45px;
     display: flex;
     flex-direction: column;
     column-gap: 0;
@@ -67,12 +66,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 60px;
+    margin-bottom: 52px;
   }
 
-  .booking h2 {
+  .booking__text h2 {
     font-size: 34px;
     line-height: 51px;
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+
+  .booking__text p {
+    text-align: center;
   }
 }
 
@@ -80,18 +85,23 @@
 @media (max-width: $vp-mobile) {
   .booking {
     min-height: 760px;
+    background-image: url("../img/bg/booking-bg-mobile.jpg");
   }
 
   .booking__container {
     max-width: 767px;
     min-width: 320px;
     width: 100%;
-    padding: 65px 15px;
+    padding: 60px 15px;
   }
 
   .booking__text {
     max-width: 270px;
-    margin-bottom: 40px;
+    margin-bottom: 34px;
+  }
+
+  .booking__text br {
+    display: block;
   }
 
   .booking h2 {
@@ -99,7 +109,7 @@
     line-height: 31px;
     text-align: center;
     margin-top: 0;
-    margin-bottom: 25px;
+    margin-bottom: 13px;
   }
 
   .booking__text p {

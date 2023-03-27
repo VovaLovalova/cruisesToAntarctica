@@ -23,7 +23,7 @@ window.addEventListener('DOMContentLoaded', () => {
       });
 
     myMap.geoObjects
-        .add(myPlacemark);
+      .add(myPlacemark);
   });
 
   // ЧЕКБОКС В ФОРМЕ
@@ -129,8 +129,23 @@ window.addEventListener('DOMContentLoaded', () => {
   // МОБИЛЬНОЕ МЕНЮ
   let navigation = document.querySelector('.navigation');
   let navigationButton = document.querySelector('#navigation-button');
-  let navigationLinkArray = navigation.querySelectorAll('a');
   let background = document.querySelector('.background');
+
+  let addListners = function () {
+    let navigationLinkArray = navigation.querySelectorAll('a');
+    for (let i = 0; navigationLinkArray.length > i; i++) {
+      navigationLinkArray[i].addEventListener('click', onNavigationLinkClick);
+    }
+    background.addEventListener('click', onBackgroundClick);
+  };
+
+  let removeListners = function () {
+    let navigationLinkArray = navigation.querySelectorAll('a');
+    for (let i = 0; navigationLinkArray.length > i; i++) {
+      navigationLinkArray[i].removeEventListener('click', onNavigationLinkClick);
+    }
+    background.removeEventListener('click', onBackgroundClick);
+  };
 
   let onNavigationLinkClick = function () {
     navigation.classList.remove('navigation--open');
@@ -138,10 +153,7 @@ window.addEventListener('DOMContentLoaded', () => {
     navigationButton.classList.add('navigation__button--close');
     background.classList.remove('background--open');
 
-    for (let i = 0; navigationLinkArray.length > i; i++) {
-      navigationLinkArray[i].removeEventListener('click', onNavigationLinkClick);
-    }
-    background.removeEventListener('click', onBackgroundClick);
+    removeListners();
   };
 
   let onBackgroundClick = function () {
@@ -150,10 +162,7 @@ window.addEventListener('DOMContentLoaded', () => {
     navigationButton.classList.remove('navigation__button--open');
     navigationButton.classList.add('navigation__button--close');
 
-    for (let i = 0; navigationLinkArray.length > i; i++) {
-      navigationLinkArray[i].removeEventListener('click', onNavigationLinkClick);
-    }
-    background.removeEventListener('click', onBackgroundClick);
+    removeListners();
   };
 
   let onNavigationButtonClick = function () {
@@ -162,10 +171,7 @@ window.addEventListener('DOMContentLoaded', () => {
     navigationButton.classList.toggle('navigation__button--close');
     background.classList.toggle('background--open');
 
-    for (let i = 0; navigationLinkArray.length > i; i++) {
-      navigationLinkArray[i].addEventListener('click', onNavigationLinkClick);
-    }
-    background.addEventListener('click', onBackgroundClick);
+    addListners();
   };
 
   navigationButton.addEventListener('click', onNavigationButtonClick);
@@ -174,12 +180,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
-  // window.addEventListener('load', () => {
-  //   initModals();
-  //   const form = new Form();
-  //   window.form = form;
-  //   form.init();
-  // });
+
+  window.addEventListener('load', () => {
+
+  });
 });
 
 // ---------------------------------

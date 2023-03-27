@@ -26,13 +26,38 @@ html {
   text-rendering: optimizeLegibility;
   // если по прежнему есть проблемы с выравниванием
   // https://transfonter.org/ - включите настройку https://prnt.sc/12rnt6g и переконвертируйте шрифт
+  height: 100%;
 }
 
 body {
   width: 100%;
   height: 100%;
-
   background-color: $color-alice-blue;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 43, 102, 0.5);
+  display: none;
+}
+
+.background--open {
+  display: block;
 }
 
 a {

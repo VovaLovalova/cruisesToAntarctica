@@ -44,7 +44,7 @@
 
   .description__container {
     max-width: 768px;
-    padding: 100px 45px;
+    padding: 100px 45px 95px;
     column-gap: 30px;
     align-items: flex-start;
   }
@@ -56,6 +56,9 @@
   .description h2 {
     font-size: 26px;
     line-height: 36px;
+    margin-bottom: 15px;
+    margin-top: -10px;
+    max-width: 288px;
   }
 
   .description__image {
@@ -83,7 +86,7 @@
     max-width: 767px;
     width: 100%;
     min-width: 290px;
-    margin-bottom: 50px;
+    margin-bottom: 45px;
   }
 
   .description h2 {
@@ -92,8 +95,7 @@
   }
 
   .description__image {
-    min-width: 290px;
-    max-width: 767px;
+    width: 290px;
     height: auto;
   }
 }

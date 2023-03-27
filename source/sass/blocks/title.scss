@@ -9,13 +9,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  // box-shadow: 0 4px 4px $color-black-transparent;
-}
-
-@media (min-resolution: 192dpi) {
-  .title {
-    background-image: url("../img/bg/title-bg@2x.jpg");
-  }
+  box-shadow: 0 4px 4px $color-black-transparent;
 }
 
 .title__container {
@@ -47,11 +41,12 @@
 @media (max-width: $vp-tablet) {
   .title {
     min-height: 638px;
+    background-image: url("../img/bg/title-bg-tablet.jpg");
   }
 
   .title__container {
     max-width: 768px;
-    padding: 280px 134px 280px 45px;
+    padding: 268px 134px 276px 45px;
   }
 
   .title h1 {
@@ -69,17 +64,19 @@
 @media (max-width: $vp-mobile) {
   .title {
     min-height: 500px;
+    background-image: url("../img/bg/title-bg-mobile.jpg");
   }
 
   .title__container {
     max-width: 767px;
     min-width: 320px;
-    padding: 185px 15px;
+    padding: 176px 15px 179px;
   }
 
   .title h1 {
     font-size: 36px;
     line-height: 45px;
+    margin-bottom: 11px;
   }
 
   .title p {

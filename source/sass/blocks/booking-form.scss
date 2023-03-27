@@ -6,6 +6,10 @@
   position: relative;
 }
 
+.booking-form br {
+  display: none;
+}
+
 .booking-form p {
   font-weight: 500;
   width: 100%;
@@ -75,7 +79,7 @@
   left: -23px;
 }
 
-.booking-form input[type="checkbox"]:checked+label[for="agreement"]::before {
+.booking-form input[type="checkbox"]:checked + label[for="agreement"]::before {
   background-image: url("../../img/svg/done.svg");
   background-position: center;
   background-repeat: no-repeat;
@@ -101,7 +105,7 @@
   position: absolute;
   bottom: 100px;
   left: 50px;
-  color: red;
+  color: #ff0000;
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
@@ -112,13 +116,33 @@
     min-width: 290px;
     width: 100%;
     min-height: 460px;
-    padding: 40px 30px;
+    padding: 35px 30px;
+  }
+
+  .booking-form br {
+    display: block;
   }
 
   .booking-form p {
     font-size: 18px;
     line-height: 25px;
-    margin-bottom: 35px;
+    margin-bottom: 28px;
     text-align: center;
+  }
+
+  .booking-form input[type="email"] {
+    margin-bottom: 18px;
+  }
+
+  .booking-form label[for="agreement"] {
+    margin-bottom: 26px;
+    margin-left: 28px;
+  }
+
+  .booking-form label[for="agreement"]::before {
+    width: 20px;
+    height: 20px;
+    top: 2px;
+    left: -28px;
   }
 }

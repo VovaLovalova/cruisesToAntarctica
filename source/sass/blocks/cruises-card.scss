@@ -41,6 +41,8 @@
   row-gap: 8px;
   margin: 0;
   margin-bottom: 14px;
+  padding: 0;
+  list-style-type: none;
 }
 
 .cruises-card button {
@@ -67,6 +69,7 @@
   background-color: $color-tangaroa;
   top: 0;
   left: 0;
+  display: block;
 }
 
 .cruises-card__cover img {
@@ -94,7 +97,13 @@
 @media (max-width: $vp-tablet) {
   .cruises-card {
     max-width: 309px;
-    padding: 35px;
+    padding: 30px 35px 35px;
+    min-height: 387px;
+  }
+
+  .cruises-card__cover span {
+    bottom: 27px;
+    left: 35px;
   }
 }
 
@@ -105,5 +114,10 @@
     max-width: 767px;
     min-width: 270px;
     padding: 35px 25px;
+  }
+
+  .cruises-card__cover span {
+    bottom: 17px;
+    left: 25px;
   }
 }

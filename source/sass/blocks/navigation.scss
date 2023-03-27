@@ -73,7 +73,7 @@
     top: 0;
     right: 0;
     width: 89%;
-    height: 101vh;
+    min-height: 568px;
     background-color: $color-alice-blue;
     flex-direction: column;
     justify-content: flex-start;
@@ -84,11 +84,13 @@
 
   .navigation--open .navigation__logo {
     fill: $color-tangaroa;
-    margin-bottom: 43px;
+    margin-bottom: 37px;
   }
 
   .navigation--open a {
     color: $color-tangaroa;
+    font-size: 18px;
+    line-height: 22px;
   }
 
   .navigation--open ul {
@@ -98,13 +100,14 @@
     flex-direction: column;
     justify-content: flex-start;
     column-gap: 0;
-    row-gap: 28px;
+    row-gap: 26px;
+    padding-left: 11px;
   }
 
   .navigation__button {
     display: block;
     position: absolute;
-    top: 3px;
+    top: -1px;
     right: 0;
     width: 24px;
     height: 24px;

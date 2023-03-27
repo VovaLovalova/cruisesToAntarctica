@@ -6,6 +6,10 @@
   align-items: center;
 }
 
+.contacts br {
+  display: none;
+}
+
 .contacts__container {
   max-width: 1366px;
   width: 100%;
@@ -68,6 +72,10 @@
     min-height: 535px;
   }
 
+  .contacts br {
+    display: block;
+  }
+
   .contacts__container {
     max-width: 768px;
     padding: 100px 45px;
@@ -83,6 +91,16 @@
 
   .contacts p {
     width: 324px;
+    margin-bottom: 27px;
+  }
+
+  .contacts li {
+    align-items: flex-start;
+  }
+
+  .contacts__img {
+    width: 18px;
+    height: auto;
   }
 }
 
@@ -96,7 +114,7 @@
     max-width: 767px;
     min-width: 320px;
     width: 100%;
-    padding: 65px 15px;
+    padding: 58px 15px;
     display: flex;
     flex-direction: column-reverse;
     column-gap: 0;

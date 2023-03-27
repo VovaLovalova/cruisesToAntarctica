@@ -25,7 +25,7 @@
   margin-bottom: 48px;
 }
 
-.cruises ul {
+.cruises__list {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
@@ -39,7 +39,7 @@
 @media (max-width: $vp-tablet) {
   .cruises__container {
     max-width: 768px;
-    padding: 100px 60px;
+    padding: 89px 60px 97px;
   }
 
   .cruises h2 {
@@ -54,19 +54,19 @@
     max-width: 767px;
     min-width: 320px;
     width: 100%;
-    padding: 60px 25px;
+    padding: 56px 25px 69px;
   }
 
   .cruises h2 {
     font-size: 24px;
     line-height: 36px;
-    margin-bottom: 40px;
+    margin-bottom: 31px;
   }
 
-  .cruises ul {
+  .cruises__list {
     flex-wrap: nowrap;
     flex-direction: column;
     justify-content: space-around;
-    gap: 30px;
+    gap: 28px;
   }
 }

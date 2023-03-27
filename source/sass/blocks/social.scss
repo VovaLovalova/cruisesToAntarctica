@@ -19,7 +19,7 @@
 
 @media (max-width: $vp-tablet) {
   .social a {
-    width: 25px;
+    width: 36px;
     height: 25px;
   }
 
@@ -30,4 +30,9 @@
 }
 
 
-@media (max-width: $vp-mobile) {}
+@media (max-width: $vp-mobile) {
+  .social a {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
