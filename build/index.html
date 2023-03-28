@@ -6,16 +6,13 @@
   <link rel="preload" href="./fonts/Montserrat-Medium.woff2" as="font" type="font/woff2">
   <link rel="preload" href="./fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2">
   <link rel="preload" href="./fonts/Montserrat-Bold.woff2" as="font" type="font/woff2">
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Описание проекта">
   <title>Cruises to Antarctica</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=18210afb-aba8-4820-a6a1-3cbd8c0ae7c5&lang=ru_RU"
-    type="text/javascript">
-    </script>
-
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=18210afb-aba8-4820-a6a1-3cbd8c0ae7c5&lang=ru_RU"></script>
 </head>
 
 <body>
@@ -55,7 +52,7 @@
         d="M15.364 15.556 9 22l-6.364-6.444a9.149 9.149 0 0 1-2.463-4.665 9.219 9.219 0 0 1 .512-5.266A9.09 9.09 0 0 1 4 1.535 8.921 8.921 0 0 1 9 0c1.78 0 3.52.534 5 1.536a9.089 9.089 0 0 1 3.315 4.09 9.22 9.22 0 0 1 .512 5.264 9.149 9.149 0 0 1-2.463 4.666ZM9 11.138c.53 0 1.04-.214 1.414-.594a2.038 2.038 0 0 0 0-2.864A1.988 1.988 0 0 0 9 7.089c-.53 0-1.04.213-1.414.593C7.21 8.06 7 8.576 7 9.113c0 .537.21 1.052.586 1.431.375.38.884.594 1.414.594Z" />
     </symbol>
 
-    <symbol viewBox="0 0 18 18" id="phone">
+    <symbol viewBox="0 0 18 18" id="phone-img">
       <path fill="#011C40"
         d="M18 13.42v3.536a1 1 0 0 1-.93.998c-.437.03-.794.046-1.07.046C7.163 18 0 10.837 0 2c0-.276.015-.633.046-1.07A1 1 0 0 1 1.044 0H4.58a.5.5 0 0 1 .498.45c.023.23.044.413.064.552A13.9 13.9 0 0 0 6.35 5.003c.095.2.033.439-.147.567L4.045 7.112a13.047 13.047 0 0 0 6.844 6.844l1.54-2.154a.462.462 0 0 1 .573-.149 13.9 13.9 0 0 0 4 1.205c.139.02.322.042.55.064a.5.5 0 0 1 .449.498H18Z" />
     </symbol>
@@ -125,7 +122,7 @@
             </div>
             <picture>
               <source type="image/webp" srcset="./img/penguins.webp 1x, ./img/penguins@2x.webp 2x">
-              <img class="description__image" src="./img/penguins.jpg" width="560" height="301"
+              <img loading="lazy" class="description__image" src="./img/penguins.jpg" width="560" height="301"
                 alt="Пингвины в Антарктике" srcset="./img/penguins@2x.jpg 2x">
             </picture>
           </div>
@@ -196,8 +193,8 @@
                   <picture>
                     <source type="image/webp"
                       srcset="./img/cards/desktop/astoria.webp 1x, ./img/cards/desktop/astoria@2x.webp 2x">
-                    <img src="./img/cards/desktop/astoria.jpg" alt="Круиз Астория" width="260" height="386"
-                      srcset="./img/cards/desktop/astoria@2x.jpg 2x">
+                    <img loading="lazy" src="./img/cards/desktop/astoria.jpg" alt="Круиз Астория" width="260"
+                      height="386" srcset="./img/cards/desktop/astoria@2x.jpg 2x">
                   </picture>
                   <span>Круиз “Астория”</span>
                 </div>
@@ -227,8 +224,8 @@
                   <picture>
                     <source type="image/webp"
                       srcset="./img/cards/desktop/astoria.webp 1x, ./img/cards/desktop/astoria@2x.webp 2x">
-                    <img src="./img/cards/desktop/astoria.jpg" alt="Круиз Астория" width="260" height="386"
-                      srcset="./img/cards/desktop/astoria@2x.jpg 2x">
+                    <img loading="lazy" src="./img/cards/desktop/astoria.jpg" alt="Круиз Астория" width="260"
+                      height="386" srcset="./img/cards/desktop/astoria@2x.jpg 2x">
                   </picture>
                   <span>Круиз “Элайн”</span>
                 </div>
@@ -258,8 +255,8 @@
                   <picture>
                     <source type="image/webp"
                       srcset="./img/cards/desktop/atlantis.webp 1x, ./img/cards/desktop/atlantis@2x.webp 2x">
-                    <img src="./img/cards/desktop/atlantis.jpg" alt="Круиз Атлантис" width="260" height="386"
-                      srcset="./img/cards/desktop/atlantis@2x.jpg 2x">
+                    <img loading="lazy" src="./img/cards/desktop/atlantis.jpg" alt="Круиз Атлантис" width="260"
+                      height="386" srcset="./img/cards/desktop/atlantis@2x.jpg 2x">
                   </picture>
                   <span>Круиз “Атлантис”</span>
                 </div>
@@ -289,7 +286,7 @@
                   <picture>
                     <source type="image/webp"
                       srcset="./img/cards/desktop/odisey.webp 1x, ./img/cards/desktop/odisey@2x.webp 2x">
-                    <img src="./img/cards/desktop/odisey.jpg" alt="Круиз Одисей" width="260" height="386"
+                    <img loading="lazy" src="./img/cards/desktop/odisey.jpg" alt="Круиз Одисей" width="260" height="386"
                       srcset="./img/cards/desktop/odisey@2x.jpg 2x">
                   </picture>
                   <span>Круиз “Одиссей”</span>
@@ -320,7 +317,7 @@
                   <picture>
                     <source type="image/webp"
                       srcset="./img/cards/desktop/olypm.webp 1x, ./img/cards/desktop/olypm@2x.webp 2x">
-                    <img src="./img/cards/desktop/olypm.jpg" alt="Круиз Олимпия" width="260" height="386"
+                    <img loading="lazy" src="./img/cards/desktop/olypm.jpg" alt="Круиз Олимпия" width="260" height="386"
                       srcset="./img/cards/desktop/olypm@2x.jpg 2x">
                   </picture>
                   <span>Круиз “Олимпия” </span>
@@ -351,7 +348,7 @@
                   <picture>
                     <source type="image/webp"
                       srcset="./img/cards/desktop/avrora.webp 1x, ./img/cards/desktop/avrora@2x.webp 2x">
-                    <img src="./img/cards/desktop/avrora.jpg" alt="Круиз Аврора" width="260" height="386"
+                    <img loading="lazy" src="./img/cards/desktop/avrora.jpg" alt="Круиз Аврора" width="260" height="386"
                       srcset="./img/cards/desktop/avrora@2x.jpg 2x">
                   </picture>
                   <span>Круиз “Аврора”</span>
@@ -382,7 +379,7 @@
                   <picture>
                     <source type="image/webp"
                       srcset="./img/cards/desktop/leonor.webp 1x, ./img/cards/desktop/leonor@2x.webp 2x">
-                    <img src="./img/cards/desktop/leonor.jpg" alt="Круиз Леонор" width="260" height="386"
+                    <img loading="lazy" src="./img/cards/desktop/leonor.jpg" alt="Круиз Леонор" width="260" height="386"
                       srcset="./img/cards/desktop/leonor@2x.jpg 2x">
                   </picture>
                   <span>Круиз “Леонор”</span>
@@ -413,7 +410,7 @@
                   <picture>
                     <source type="image/webp"
                       srcset="./img/cards/desktop/minion.webp 1x, ./img/cards/desktop/minion@2x.webp 2x">
-                    <img src="./img/cards/desktop/minion.jpg" alt="Круиз Минион" width="260" height="386"
+                    <img loading="lazy" src="./img/cards/desktop/minion.jpg" alt="Круиз Минион" width="260" height="386"
                       srcset="./img/cards/desktop/minion@2x.jpg 2x">
                   </picture>
                   <span>Круиз “Минион - 1”</span>
@@ -466,7 +463,7 @@
                 </li>
                 <li>
                   <svg class="contacts__img" width="18" height="18">
-                    <use href="#phone"></use>
+                    <use href="#phone-img"></use>
                   </svg>
                   <span><a href="tel:88002000000">8-800-200-00-00</a></span>
                 </li>
@@ -532,6 +529,26 @@
     <div class="background"></div>
   </div>
 
+
+
+  <!-- <script>
+    ymaps.ready(function () {
+      let myMap = new ymaps.Map('map', {
+        center: [59.937584989234644, 30.322661991559418],
+        zoom: 16,
+      }, {
+        searchControlProvider: 'yandex#search',
+      });
+      let myPlacemark = new ymaps.Placemark(myMap.getCenter(), {}, {
+        iconLayout: 'default#image',
+        iconImageHref: '../img/svg/marker.svg',
+        iconImageSize: [18, 22],
+        iconImageOffset: [-9, -11],
+      });
+
+      myMap.geoObjects.add(myPlacemark);
+    });
+  </script> -->
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>

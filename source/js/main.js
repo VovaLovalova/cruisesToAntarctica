@@ -1,29 +1,27 @@
-import { iosVhFix } from './utils/ios-vh-fix';
-import { initModals } from './modules/modals/init-modals';
-import { Form } from './modules/form-validate/form';
+import {iosVhFix} from './utils/ios-vh-fix';
 
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
-
   // КАРТА
 
+  let ymaps = window.ymaps;
+
   ymaps.ready(function () {
-    const myMap = new ymaps.Map('map', {
+    let myMap = new ymaps.Map('map', {
       center: [59.937584989234644, 30.322661991559418],
       zoom: 16,
     }, {
       searchControlProvider: 'yandex#search',
-    }),
-      myPlacemark = new ymaps.Placemark(myMap.getCenter(), {}, {
-        iconLayout: 'default#image',
-        iconImageHref: '../img/svg/marker.svg',
-        iconImageSize: [18, 22],
-        iconImageOffset: [-9, -11]
-      });
+    });
+    let myPlacemark = new ymaps.Placemark(myMap.getCenter(), {}, {
+      iconLayout: 'default#image',
+      iconImageHref: '../img/svg/marker.svg',
+      iconImageSize: [18, 22],
+      iconImageOffset: [-9, -11],
+    });
 
-    myMap.geoObjects
-      .add(myPlacemark);
+    myMap.geoObjects.add(myPlacemark);
   });
 
   // ЧЕКБОКС В ФОРМЕ
@@ -131,50 +129,52 @@ window.addEventListener('DOMContentLoaded', () => {
   let navigationButton = document.querySelector('#navigation-button');
   let background = document.querySelector('.background');
 
-  let addListners = function () {
-    let navigationLinkArray = navigation.querySelectorAll('a');
-    for (let i = 0; navigationLinkArray.length > i; i++) {
-      navigationLinkArray[i].addEventListener('click', onNavigationLinkClick);
-    }
-    background.addEventListener('click', onBackgroundClick);
-  };
+  if (navigation && navigationButton && background) {
+    let addListners = function () {
+      let navigationLinkArray = navigation.querySelectorAll('a');
+      for (let i = 0; navigationLinkArray.length > i; i++) {
+        navigationLinkArray[i].addEventListener('click', onNavigationLinkClick);
+      }
+      background.addEventListener('click', onBackgroundClick);
+    };
 
-  let removeListners = function () {
-    let navigationLinkArray = navigation.querySelectorAll('a');
-    for (let i = 0; navigationLinkArray.length > i; i++) {
-      navigationLinkArray[i].removeEventListener('click', onNavigationLinkClick);
-    }
-    background.removeEventListener('click', onBackgroundClick);
-  };
+    let removeListners = function () {
+      let navigationLinkArray = navigation.querySelectorAll('a');
+      for (let i = 0; navigationLinkArray.length > i; i++) {
+        navigationLinkArray[i].removeEventListener('click', onNavigationLinkClick);
+      }
+      background.removeEventListener('click', onBackgroundClick);
+    };
 
-  let onNavigationLinkClick = function () {
-    navigation.classList.remove('navigation--open');
-    navigationButton.classList.remove('navigation__button--open');
-    navigationButton.classList.add('navigation__button--close');
-    background.classList.remove('background--open');
+    let onNavigationLinkClick = function () {
+      navigation.classList.remove('navigation--open');
+      navigationButton.classList.remove('navigation__button--open');
+      navigationButton.classList.add('navigation__button--close');
+      background.classList.remove('background--open');
 
-    removeListners();
-  };
+      removeListners();
+    };
 
-  let onBackgroundClick = function () {
-    navigation.classList.remove('navigation--open');
-    background.classList.remove('background--open');
-    navigationButton.classList.remove('navigation__button--open');
-    navigationButton.classList.add('navigation__button--close');
+    let onBackgroundClick = function () {
+      navigation.classList.remove('navigation--open');
+      background.classList.remove('background--open');
+      navigationButton.classList.remove('navigation__button--open');
+      navigationButton.classList.add('navigation__button--close');
 
-    removeListners();
-  };
+      removeListners();
+    };
 
-  let onNavigationButtonClick = function () {
-    navigation.classList.toggle('navigation--open');
-    navigationButton.classList.toggle('navigation__button--open');
-    navigationButton.classList.toggle('navigation__button--close');
-    background.classList.toggle('background--open');
+    let onNavigationButtonClick = function () {
+      navigation.classList.toggle('navigation--open');
+      navigationButton.classList.toggle('navigation__button--open');
+      navigationButton.classList.toggle('navigation__button--close');
+      background.classList.toggle('background--open');
 
-    addListners();
-  };
+      addListners();
+    };
 
-  navigationButton.addEventListener('click', onNavigationButtonClick);
+    navigationButton.addEventListener('click', onNavigationButtonClick);
+  }
 
   iosVhFix();
 
