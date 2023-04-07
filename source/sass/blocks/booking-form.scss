@@ -80,7 +80,7 @@
 }
 
 .booking-form input[type="checkbox"]:checked + label[for="agreement"]::before {
-  background-image: url("../../img/svg/done.svg");
+  background-image: url("../img/svg/done.svg");
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -95,6 +95,7 @@
   color: $color-tangaroa;
   cursor: pointer;
   border: none;
+  user-select: none;
 }
 
 .booking-form button[type="submit"]:hover {

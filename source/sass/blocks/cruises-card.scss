@@ -1,7 +1,7 @@
 .cruises-card {
-  max-width: 260px;
-  width: 100%;
-  min-height: 386px;
+  width: 260px;
+  height: 386px;
+  overflow: auto;
   background-color: $color-tangaroa;
   padding: 28px 25px 37px;
   position: relative;
@@ -56,6 +56,7 @@
   color: $color-tangaroa;
   cursor: pointer;
   border: none;
+  user-select: none;
 }
 
 .cruises-card button:hover {
@@ -96,9 +97,9 @@
 
 @media (max-width: $vp-tablet) {
   .cruises-card {
-    max-width: 309px;
+    width: 309px;
     padding: 30px 35px 35px;
-    min-height: 387px;
+    height: 387px;
   }
 
   .cruises-card__cover span {
@@ -110,9 +111,8 @@
 
 @media (max-width: $vp-mobile) {
   .cruises-card {
-    min-height: 386px;
-    max-width: 767px;
-    min-width: 270px;
+    height: 386px;
+    width: 270px;
     padding: 35px 25px;
   }
 

@@ -73,13 +73,13 @@
     top: 0;
     right: 0;
     width: 89%;
-    min-height: 568px;
+    height: 100vh;
     background-color: $color-alice-blue;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     padding: 20px 15px;
-    z-index: 2;
+    z-index: 3;
   }
 
   .navigation--open .navigation__logo {

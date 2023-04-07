@@ -28,9 +28,13 @@
 
 @media (max-width: $vp-tablet) {
   .advantages-card {
-    max-width: 206px;
+    min-width: 206px;
     min-height: 310px;
     padding: 26px 16px 18px 20px;
+  }
+
+  .advantages-card br {
+    display: block;
   }
 
   .advantages-card__img {

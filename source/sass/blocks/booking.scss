@@ -16,13 +16,17 @@
   width: 100%;
   padding: 50px 163px;
   display: flex;
-  align-items: center;
-  column-gap: 144px;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 .booking__text {
   max-width: 493px;
-  width: 100%;
+  min-height: 455px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .booking__text br {
@@ -57,12 +61,14 @@
     max-width: 768px;
     padding: 88px 45px;
     display: flex;
+    align-items: center;
     flex-direction: column;
     column-gap: 0;
   }
 
   .booking__text {
     max-width: 420px;
+    min-height: 90px;
     display: flex;
     flex-direction: column;
     align-items: center;

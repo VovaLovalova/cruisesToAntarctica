@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', () => {
     });
     let myPlacemark = new ymaps.Placemark(myMap.getCenter(), {}, {
       iconLayout: 'default#image',
-      iconImageHref: '../img/svg/marker.svg',
+      iconImageHref: './img/svg/marker.svg',
       iconImageSize: [18, 22],
       iconImageOffset: [-9, -11],
     });
@@ -82,30 +82,7 @@ window.addEventListener('DOMContentLoaded', () => {
         input.value = '';
       }
 
-      if (['7', '8', '9'].indexOf(inputNumbersValue[0]) > -1) {
-        // russian number
-        if (inputNumbersValue[0] === '9') {
-          inputNumbersValue = '7' + inputNumbersValue;
-        }
-        let firstSymbols = '+7(';
-        formatedInputValue = firstSymbols;
-
-        if (inputNumbersValue.length > 1) {
-          formatedInputValue += inputNumbersValue.substring(1, 4);
-        }
-        if (inputNumbersValue.length >= 5) {
-          formatedInputValue += ') ' + inputNumbersValue.substring(4, 7);
-        }
-        if (inputNumbersValue.length >= 8) {
-          formatedInputValue += '-' + inputNumbersValue.substring(7, 9);
-        }
-        if (inputNumbersValue.length >= 10) {
-          formatedInputValue += '-' + inputNumbersValue.substring(9, 11);
-        }
-      } else {
-        // not russian number
-        formatedInputValue = '+' + inputNumbersValue.substring(0, 16);
-      }
+      formatedInputValue = inputNumbersValue.substring(0, 16);
 
       input.value = formatedInputValue;
     };
@@ -127,15 +104,15 @@ window.addEventListener('DOMContentLoaded', () => {
   // МОБИЛЬНОЕ МЕНЮ
   let navigation = document.querySelector('.navigation');
   let navigationButton = document.querySelector('#navigation-button');
-  let background = document.querySelector('.background');
+  let body = document.querySelector('body');
 
-  if (navigation && navigationButton && background) {
+  if (navigation && navigationButton) {
     let addListners = function () {
       let navigationLinkArray = navigation.querySelectorAll('a');
       for (let i = 0; navigationLinkArray.length > i; i++) {
         navigationLinkArray[i].addEventListener('click', onNavigationLinkClick);
       }
-      background.addEventListener('click', onBackgroundClick);
+      body.addEventListener('click', onBodyClick);
     };
 
     let removeListners = function () {
@@ -143,33 +120,32 @@ window.addEventListener('DOMContentLoaded', () => {
       for (let i = 0; navigationLinkArray.length > i; i++) {
         navigationLinkArray[i].removeEventListener('click', onNavigationLinkClick);
       }
-      background.removeEventListener('click', onBackgroundClick);
+      body.removeEventListener('click', onBodyClick);
     };
 
     let onNavigationLinkClick = function () {
       navigation.classList.remove('navigation--open');
       navigationButton.classList.remove('navigation__button--open');
       navigationButton.classList.add('navigation__button--close');
-      background.classList.remove('background--open');
-
+      body.classList.remove('body--hidden');
       removeListners();
     };
 
-    let onBackgroundClick = function () {
-      navigation.classList.remove('navigation--open');
-      background.classList.remove('background--open');
-      navigationButton.classList.remove('navigation__button--open');
-      navigationButton.classList.add('navigation__button--close');
-
-      removeListners();
+    let onBodyClick = function (e) {
+      if (e.target !== navigation && e.target !== navigationButton) {
+        navigation.classList.remove('navigation--open');
+        navigationButton.classList.remove('navigation__button--open');
+        navigationButton.classList.add('navigation__button--close');
+        body.classList.remove('body--hidden');
+        removeListners();
+      }
     };
 
     let onNavigationButtonClick = function () {
       navigation.classList.toggle('navigation--open');
       navigationButton.classList.toggle('navigation__button--open');
       navigationButton.classList.toggle('navigation__button--close');
-      background.classList.toggle('background--open');
-
+      body.classList.toggle('body--hidden');
       addListners();
     };
 

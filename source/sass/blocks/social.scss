@@ -1,6 +1,8 @@
 .social ul {
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
+  max-width: 270px;
   margin: 0;
   padding: 0;
 }
